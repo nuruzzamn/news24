@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-white text-2xl font-bold">News App</h1>
+        <h1 className="text-white text-2xl font-bold ">News App</h1>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
@@ -32,7 +32,7 @@ const Navbar = () => {
               Categories
             </a>
             {isDropdownOpen && (
-              <ul className="absolute bg-gray-700 text-white rounded-lg shadow-md mt-2 py-2 w-36">
+              <ul className="absolute bg-transparent text-white rounded-lg shadow-md  py-2 w-36">
                 <li className="px-4 py-2 hover:bg-gray-600">
                   <a href="#">Technology</a>
                 </li>
@@ -88,7 +88,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-700 text-white py-2 space-y-2">
+        <div className="md:hidden bg-gray-700 text-white mt-2 py-2 space-y-2">
           <a href="#" className="block px-4 py-2 hover:bg-gray-600">
             Home
           </a>

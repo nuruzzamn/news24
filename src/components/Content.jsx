@@ -4,7 +4,12 @@ import { newsArticles } from "../db/dummyData";
 
 const NewsCard = ({ title, description, image, publishedAt }) => (
   <div className="bg-white shadow-md rounded-lg overflow-hidden">
-    <img className="w-full h-48 object-cover" src={image} alt={title} />
+    <img
+      className="w-full h-48 object-cover"
+      src={image}
+      alt={title}
+      loading="lazy"
+    />
     <div className="p-4">
       <h2 className="font-bold text-lg">{title}</h2>
       <p className="text-gray-600 text-sm">{description}</p>
