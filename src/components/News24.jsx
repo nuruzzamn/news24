@@ -8,7 +8,7 @@ import Navbar from "./navbar";
 export const News24 = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
-      <Navbar />
+      {/* <Navbar /> */}
 
       <main className="flex flex-1">
         <Sidebar />

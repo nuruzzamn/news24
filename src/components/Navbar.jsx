@@ -9,13 +9,16 @@ const Navbar = () => {
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-white text-2xl font-bold ">News App</h1>
+        {/* <h1 className="text-white text-2xl font-bold ">News App</h1> */}
+        <a href="/" className="text-white text-2xl font-bold">
+          News App
+        </a>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
           <li>
             <a
-              href="#"
+              href="/"
               className="text-white hover:text-blue-400 transition duration-300"
             >
               Home
@@ -32,18 +35,23 @@ const Navbar = () => {
               Categories
             </a>
             {isDropdownOpen && (
-              <ul className="absolute bg-transparent text-white rounded-lg shadow-md  py-2 w-36">
-                <li className="px-4 py-2 hover:bg-gray-600">
-                  <a href="#">Technology</a>
+              <ul className="absolute bg-slate-300 text-black rounded-lg shadow-md z-50 py-2 w-36">
+                <li className="px-4 py-2 hover:bg-gray-600 hover:text-white">
+                  <a href="/technology">Technology</a>
+                  {/* <a href="#">Technology</a> */}
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-600">
-                  <a href="#">Politics</a>
+                <li className="px-4 py-2 hover:bg-gray-600 hover:text-white">
+                  <a href="/under-construction">Politics</a>
+
+                  {/* <a href="#">Politics</a> */}
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-600">
-                  <a href="#">Sports</a>
+                <li className="px-4 py-2 hover:bg-gray-600 hover:text-white">
+                  <a href="/under-construction">Sports</a>
+                  {/* <a href="#">Sports</a> */}
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-600">
-                  <a href="#">Entertainment</a>
+                <li className="px-4 py-2 hover:bg-gray-600 hover:text-white">
+                  <a href="/under-construction">Entertainment</a>
+                  {/* <a href="#">Entertainment</a> */}
                 </li>
               </ul>
             )}
@@ -51,10 +59,19 @@ const Navbar = () => {
 
           <li>
             <a
-              href="#"
+              href="/about-us"
               className="text-white hover:text-blue-400 transition duration-300"
             >
               About
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/contact"
+              className="text-white hover:text-blue-400 transition duration-300"
+            >
+              Contact us
             </a>
           </li>
         </ul>
@@ -89,19 +106,21 @@ const Navbar = () => {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-gray-700 text-white mt-2 py-2 space-y-2">
-          <a href="#" className="block px-4 py-2 hover:bg-gray-600">
+          <a href="/" className="block px-4 py-2 hover:bg-gray-600">
             Home
           </a>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-600">
+          {/* <Link href="#" className="block px-4 py-2 hover:bg-gray-600">
             Categories
-          </a>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-600">
+          </Link> */}
+          <a href="/about-us" className="block px-4 py-2 hover:bg-gray-600">
             About
+          </a>
+          <a href="/contact" className="block px-4 py-2 hover:bg-gray-600">
+            Contact us
           </a>
         </div>
       )}
     </nav>
   );
 };
-
 export default Navbar;
